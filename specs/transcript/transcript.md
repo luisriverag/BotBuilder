@@ -86,7 +86,7 @@ Transcripts are ordered collections of Activity objects. JSON is used as the com
 
 `T2000`: Transcript contents MUST be serializable to the JSON format, including adherence to e.g. field uniqueness constraints.
 
-`T2001`: Transcripts MUST contain only child activities, as defined by [Bot Framework Activity](botframework-activity.md) [[1](#References)]. Activities MUST adhere to the requirements of that specification for the transcript to be valid.
+`T2001`: Transcripts MUST contain only child activities, as defined by [Bot Framework Activity](../botframework-activity/botframework-activity.md) [[1](#References)]. Activities MUST adhere to the requirements of that specification for the transcript to be valid.
 
 `T2002`: Processors MAY allow improperly-cased field names, although this is not required. Processors MAY reject activities that do not include fields with the proper casing.
 
@@ -161,6 +161,9 @@ Additionally, some fields become less important. For example, the [`channelId](.
 4. [RFC 2397](https://tools.ietf.org/html/rfc2397)
 
 # Appendix I - Changes
+
+## 2021-10-26 - chrimc@microsoft.com
+* Fixed activity links
 
 ## 2018-07-05 - dandris@microsoft.com
 

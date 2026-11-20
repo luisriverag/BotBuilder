@@ -1,3 +1,11 @@
+# ARCHIVE NOTICE:
+
+The Bot Framework SDK is being retired with final long term support ending December 2025. This means that this project will no longer be updated or maintained. Customers using this tool will not be disrupted and bots built with the SDK will continue to function. However, the tool will no longer be supported through service tickets in the Azure portal and will *not* receive any product or feature updates. It will not have any regular non-critical dependency updates.
+
+To build agents with your choice of AI services, orchestration, and knowledge, consider using the [Microsoft 365 Agents SDK](aka.ms/agents). The Agents SDK is GA and has support for C#, JavaScript or Python. You can learn more about the Agents SDK at aka.ms/agents. If you're looking for a SaaS-based agent platform, consider Microsoft Copilot Studio. If you have an existing bot built with the Bot Framework SDK, you can update your bot to the Agents SDK. You can review the core changes and updates at Bot Framework SDK to Agents SDK migration guidance [here](https://learn.microsoft.com/en-us/microsoft-365/agents-sdk/bf-migration-guidance). Support tickets for the Bot Framework SDK will no longer be serviced as of December 31, 2025.
+
+We plan to archive this project no later than end of December of 2025.
+
 # ![Bot Framework](./docs/media/BotFrameworkSDK.png)
 
 ### [What's new with Bot Framework?](https://docs.microsoft.com/en-us/azure/bot-service/what-is-new?view=azure-bot-service-4.0)
@@ -6,30 +14,26 @@ Bot Framework provides the most comprehensive experience for building conversati
 
 With the [Bot Framework SDK](#bot-framework-sdk-v4), developers can build bots that converse free-form or with guided interactions including using simple text or rich cards that contain text, images, and action buttons.
 
-Developers can model and build sophisticated conversation using their favorite programming languages including C#, JS, Python and Java or using [Bot Framework Composer](https://aka.ms/bfcomposer), an open-source, visual authoring canvas for developers and multi-disciplinary teams to design and build conversational experiences with Language Understanding, QnA Maker and sophisticated composition of bot replies (Language Generation).
+Developers can model and build sophisticated conversation using their favorite programming languages including C#, JS, and Python for developers and multi-disciplinary teams to design and build conversational experiences.
 
 Checkout the [Bot Framework ecosystem](#bot-framework-ecosystem) section to learn more about other tooling and services related to the Bot Framework SDK.
 
-![Bot Framework SDK](./docs/media/GitHubBannerV2.gif)
-
 ## Quicklinks
-| [Bot Framework Composer](https://aka.ms/bfcomposer)  | [C# Repo](https://github.com/Microsoft/botbuilder-dotnet)  | [JS Repo](https://github.com/Microsoft/botbuilder-js)  | [Python Repo](https://github.com/Microsoft/botbuilder-python) |  [Java Repo](https://github.com/Microsoft/botbuilder-java) | [BF CLI](https://github.com/Microsoft/botframework-cli) |
+| [C# Repo](https://github.com/Microsoft/botbuilder-dotnet)  | [JS Repo](https://github.com/Microsoft/botbuilder-js)  | [Python Repo](https://github.com/Microsoft/botbuilder-python) | [BF CLI](https://github.com/Microsoft/botframework-cli) |
 
 ## Bot Framework SDK v4
 The Bot Framework SDK v4 is an [open source SDK][1a] that enable developers to model and build sophisticated conversation using their favorite programming language.
 
-|   | C#  | JS  | Python |  Java |
-|---|:---:|:---:|:------:|:-----:|
-|Stable Release |[packages][1] | [packages][2] | [packages][3] | [packages][3a]|
-|Docs | [docs][5] |[docs][5] |[docs][5]  |[docs][5] |
-|Samples |[.NET Core][6], [WebAPI][10] |[Node.js][7] , [TypeScript][8], [es6][9]  | [Python][111] | [Java][112] |
+|   | C#  | JS  | Python |
+|---|:---:|:---:|:------:|
+|Stable Release |[packages][1] | [packages][2] | [packages][3] |
+|Docs | [docs][5] |[docs][5] |[docs][5]  |
+|Samples |[.NET Core][6], [WebAPI][10] |[Node.js][7] , [TypeScript][8], [es6][9]  | [Python][111] |
 
 [1a]:https://github.com/microsoft/botframework-sdk/#readme
 [1]:https://github.com/Microsoft/botbuilder-dotnet/#packages
 [2]:https://github.com/Microsoft/botbuilder-js#packages
 [3]:https://github.com/microsoft/botbuilder-python/#packages
-[3a]:https://github.com/microsoft/botbuilder-java/#packages
-[4]:https://github.com/Microsoft/botbuilder-java#packages
 [5]:https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0
 [6]:https://github.com/Microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore
 [7]:https://github.com/Microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs
@@ -37,60 +41,58 @@ The Bot Framework SDK v4 is an [open source SDK][1a] that enable developers to m
 [9]:https://github.com/Microsoft/BotBuilder-Samples/tree/main/samples/javascript_es6
 [10]:https://github.com/Microsoft/BotBuilder-Samples/tree/main/samples/csharp_webapi
 [111]:https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python
-[112]: https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/java_springboot
 
 ## Channels and Adapters
 There are two ways to connect your bot to a client experience:
 * **Azure Bot Service Channel** - Language and SDK independent support via Azure Bot Service
 * **Bot Framework SDK Adapter** -  A per language Adapter component
 
-| Client          | Azure Channel  | C# Adapter           | JS Adapter        | Python Adapter     |
-|-----------------|:--------------:|:--------------------:|:-----------------:|:------------------:|
-| Microsoft Teams | [Azure][55abs] |                      |                   |                    |
-| Direct Line     | [Azure][55abs] |                      |                   |                    |
-| Web Chat        | [Azure][55abs] |                      | [Botkit][55bk]    |                    |
-| Skype           | [Azure][55abs] |                      |                   |                    |
-| Email           | [Azure][55abs] |                      |                   |                    |
-| Facebook        | [Azure][55abs] |  [SDK][55sdkcsfb]    | [Botkit][55bk]    |                    |
-| Slack           | [Azure][55abs] |  [SDK][55sdkcsslack] | [Botkit][55bk]    | [SDK][55sdkpyslack] |
-| Kik             | [Azure][55abs] |                      |                   |                    |
-| Telegram        | [Azure][55abs] |                      |                   |                    |
-| Line            | [Azure][55abs] |                      |                   |                    |
-| GroupMe         | [Azure][55abs] |                      |                   |                    |
-| Twilio (SMS)    | [Azure][55abs] | [SDK][55sdkcstwilio] | [Botkit][55bk]    |                    |
-| Alexa Skills    |                | [Community][55cs]    | [Community][55js] |                    |
-| Google Actions  |                | [Community][55cs]    | [Community][55js] |                    |
-| Google Hangouts |                |                      | [Botkit][55bk]    |                    |
-| WebEx           |                | [SDK][55sdkcswebex]    | [Botkit][55bk]    |                    |
-| WhatsApp (Infobip)  |            | [Community][55cs]    |                   |                    |
-| Zoom            |                | [Community][55cs]    |                   |                    |
-| RingCentral     |                | [Community][55cs]    |                   |                    |
-| Cortana         | [Azure][55abs] |                      |                   |                    |
-| Console         |                |                      | [Community][55js] |                    |
+| Client          | Azure Channel  | C# Adapter           | JS Adapter        |
+|-----------------|:--------------:|:--------------------:|:-----------------:|
+| Microsoft Teams | [Azure][55abs] |                      |                   |
+| Direct Line     | [Azure][55abs] |                      |                   |
+| Web Chat        | [Azure][55abs] |                      | [Botkit][55bk]    |
+| Skype           | [Azure][55abs] |                      |                   |
+| Email           | [Azure][55abs] |                      |                   |
+| Facebook        | [Azure][55abs] |  [Community][55sdkcsfb]    | [Botkit][55bk]    |
+| Slack           | [Azure][55abs] |  [Community][55sdkcsslack] | [Botkit][55bk]    |
+| Kik             | [Azure][55abs] |                      |                   |
+| Telegram        | [Azure][55abs] |                      |                   |
+| Line            | [Azure][55abs] |                      |                   |
+| GroupMe         | [Azure][55abs] |                      |                   |
+| Twilio (SMS)    | [Azure][55abs] | [Community][55sdkcstwilio] | [Botkit][55bk]    |
+| Alexa Skills    |                | [Community][55cs]    | [Community][55js] |
+| Google Actions  |                | [Community][55cs]    | [Community][55js] |
+| Google Hangouts |                |                      | [Botkit][55bk]    |
+| WebEx           |                | [Community][55sdkcswebex]    | [Botkit][55bk]    |
+| WhatsApp (Infobip)  |            | [Community][55cs]    |                   |
+| Zoom            |                | [Community][55cs]    |                   |
+| RingCentral     |                | [Community][55cs]    |                   |
+| Cortana         | [Azure][55abs] |                      |                   |
+| Console         |                |                      | [Community][55js] |
 
 [55abs]:https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0
 [55cs]:https://github.com/BotBuilderCommunity/botbuilder-community-dotnet#adapters
 [55js]:https://github.com/BotBuilderCommunity/botbuilder-community-js#adapters
 [55bk]:https://github.com/howdyai/botkit#readme
-[55sdkcsfb]:https://github.com/microsoft/botbuilder-dotnet/tree/main/libraries/Adapters/Microsoft.Bot.Builder.Adapters.Facebook
-[55sdkcsslack]:https://github.com/microsoft/botbuilder-dotnet/tree/main/libraries/Adapters/Microsoft.Bot.Builder.Adapters.Slack
-[55sdkcstwilio]:https://github.com/microsoft/botbuilder-dotnet/tree/main/libraries/Adapters/Microsoft.Bot.Builder.Adapters.Twilio
-[55sdkcswebex]:https://github.com/microsoft/botbuilder-dotnet/tree/main/libraries/Adapters/Microsoft.Bot.Builder.Adapters.Webex
+[55sdkcsfb]:https://github.com/BotBuilderCommunity/botbuilder-community-dotnet/tree/develop/libraries/Bot.Builder.Community.Adapters.Facebook
+[55sdkcsslack]:https://github.com/BotBuilderCommunity/botbuilder-community-dotnet/tree/develop/libraries/Bot.Builder.Community.Adapters.Slack
+[55sdkcstwilio]:https://github.com/BotBuilderCommunity/botbuilder-community-dotnet/tree/develop/libraries/Bot.Builder.Community.Adapters.Twilio
+[55sdkcswebex]:https://github.com/BotBuilderCommunity/botbuilder-community-dotnet/tree/develop/libraries/Bot.Builder.Community.Adapters.Webex
 [55sdkpyslack]:https://github.com/microsoft/botbuilder-python/tree/main/libraries/botbuilder-adapters-slack
 
 ## Community Open Source Projects
 The following open source communities make various components available to extend your bot application, including adapters, recognizers, dialogs and middleware.
 
-|                            |       C#       | JavaScript |    Python      |    Java      |
-|----------------------------|:--------------:|:----------:|:--------------:|:------------:|
-| [Bot Framework Community][56] | [C#][56dotnet] | [JavaScript][56js] | [Python][56py] | [Java][56ja] |
-| [Botkit][56bk]             |                | [JavaScript][56bk] |                |              |
+|                            |       C#       | JavaScript |    Python      |
+|----------------------------|:--------------:|:----------:|:--------------:|
+| [Bot Framework Community][56] | [C#][56dotnet] | [JavaScript][56js] | [Python][56py] |
+| [Botkit][56bk]             |                | [JavaScript][56bk] |                |
 
 [56]:https://github.com/botbuildercommunity#readme
 [56dotnet]:https://github.com/botbuildercommunity/botbuilder-community-dotnet#readme
 [56js]:https://github.com/botbuildercommunity/botbuilder-community-js#readme
 [56py]:https://github.com/botbuildercommunity/botbuilder-community-python#readme
-[56ja]:https://github.com/botbuildercommunity/botbuilder-community-java#readme
 [56bk]:https://github.com/howdyai/botkit#readme
 
 ## Questions and Help
@@ -110,67 +112,33 @@ We track functional issues and features asks for the Bot Framework SDK, tools an
 | SDK v4 .NET                 | core bot runtime for .NET, connectors, middleware, dialogs, prompts, LUIS and QnA                  | [File an issue][70csissues]       |
 | SDK v4 JavaScript           | core bot runtime for Typescript/Javascript, connectors, middleware, dialogs, prompts, LUIS and QnA | [File an issue][70jsissues]       |
 | SDK v4 Python               | core bot runtime for Python, connectors, middleware, dialogs, prompts, LUIS and QnA                | [File an issue][70pyissues]       |
-| SDK v4 Java                 | core bot runtime for Java, connectors, middleware, dialogs, prompts, LUIS and QnA                  | [File an issue][70jaissues]       |
-| Bot Framework Composer      | bot framework composer electron and web app                                                        | [File an issue][70composerissues] |
 | Bot Framework CLI           | bot framework cli tools                                                                            | [File an issue][70cliissues]  |
 | Webchat                     | bot framework web chat tool                                                                        | [File an issue][70webchatissues]  |
 
 [70csissues]:https://github.com/Microsoft/botbuilder-dotnet/issues
 [70jsissues]:https://github.com/Microsoft/botbuilder-js/issues
 [70pyissues]:https://github.com/Microsoft/botbuilder-python/issues
-[70jaissues]:https://github.com/Microsoft/botbuilder-java/issues
 [70cliissues]:https://github.com/Microsoft/botframework-cli/issues
-[70composerissues]:https://github.com/Microsoft/botframework-composer/issues
 [70webchatissues]:https://github.com/Microsoft/botframework-webchat/issues
 
 ## Prior releases
 
-- Bot Builder v3 SDK has been migrated to the [Bot Framework SDK V3](https://github.com/microsoft/botbuilder-v3) repository.
+- Bot Builder v3 SDK has been migrated to the [Bot Framework SDK V3](https://github.com/microsoft/botbuilder-v3) repository. The V3 SDK is retired with final long-term support ending on December 31st, 2019
 
 ## Bot Framework ecosystem
 
-- [Bot Framework Composer](#Bot-Framework-Composer)
-- [Bot Framework Solutions](#Bot-Framework-Solutions)
-- [Botkit](#Botkit)
 - [Azure Bot Service](#Azure-Bot-Service)
 - [Bot Framework Emulator](#Bot-Framework-Emulator)
 - [Bot Framework Web Chat](#Bot-Framework-Web-Chat)
-- [Bot Framework Tools](#Bot-Framework-CLI-Tools)
+- [Bot Framework CLI](#Bot-Framework-CLI)
 - [Language Understanding](#Language-Understanding)
 - [QnA Maker](#QnA-Maker)
 - [Dispatch](#Dispatch)
 - [Speech Services](#Speech-Services)
 - [Adaptive cards](#Adaptive-Cards)
 - [Analytics](#Analytics)
-
-### Bot Framework Composer
-[Bot Framework Composer](https://github.com/microsoft/BotFramework-Composer/blob/main/README.md) is an integrated development tool for developers and multi-disciplinary teams to build bots and conversational experiences with the Microsoft Bot Framework. Within this tool, you'll find everything you need to build a sophisticated conversational experience.
-
-### Botkit
-[Botkit][100] is a developer tool and SDK for building chat bots, apps and custom integrations for major messaging platforms. Botkit bots `hear()` triggers, `ask()` questions and `say()` replies. Developers can use this syntax to build dialogs - now cross compatible with the latest version of Bot Framework SDK.
-
-In addition, Botkit brings with it 6 platform adapters allowing Javascript bot applications to communicate directly with messaging platforms: [Slack][102], [Webex Teams][103], [Google Hangouts][104], [Facebook Messenger][105], [Twilio][106], and [Web chat][107].
-
-Botkit is part of Microsoft Bot Framework and is released under the [MIT Open Source license][101]
-
-[100]:https://github.com/howdyai/botkit#readme
-[101]:https://github.com/howdyai/botkit/blob/main/LICENSE.md
-[102]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-slack#readme
-[103]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-webex#readme
-[104]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-hangouts#readme
-[105]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-facebook#readme
-[106]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-twilio-sms#readme
-[107]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-web#readme
-
-### Bot Framework Virtual Assistant Solution Accelerator
-
-The [Bot Framework Solutions repository](https://github.com/Microsoft/botframework-solutions#readme) is home to the [Virtual Assistant Solution Accelerator](https://aka.ms/bfvadocs), which provides a set of templates, solution accelerators and skills to help build sophisticated conversational experiences.
-
-- [**Virtual Assistant.**](https://aka.ms/bfvadocs) Customers and partners have a significant need to deliver a conversational assistant tailored to their brand, personalized to their users, and made available across a broad range of canvases and devices. <br/><br/>  This brings together all of the supporting components and greatly simplifies the creation of a new bot project including: basic conversational intents, Dispatch integration, QnA Maker, Application Insights and an automated deployment.
-
-- [**Skills.**](https://aka.ms/bfskillsdocs) A library of re-usable conversational skill building-blocks enabling you to add functionality to a Bot. We currently provide: Calendar, Email, Task, Point of Interest, Automotive, Weather and News skills. Skills include LUIS models, Dialogs, and integration code delivered in source code form to customize and extend as required.
-
-- [**Analytics.**](https://github.com/Microsoft/AI/blob/main/docs/readme.md#analytics) Gain key insights into your bot’s health and behavior with the Bot Framework Analytics solutions, which includes: sample Application Insights queries, and Power BI dashboards to understand the full breadth of your bot’s conversations with users.
+- [Bot Framework Composer](#Bot-Framework-Composer)
+- [Botkit](#Botkit)
 
 ### Azure Bot Service
 Azure Bot Service enables you to host intelligent, enterprise-grade bots with complete ownership and control of your data. Developers can register and connect their bots to users on Skype, Microsoft Teams, Cortana, Web Chat, and more. [[Docs][28]]
@@ -200,11 +168,30 @@ The Bot Framework [Web Chat][23] is a highly customizable web-based client chat 
 
 [23]:https://github.com/Microsoft/BotFramework-WebChat#readme
 [24]:https://www.npmjs.com/package/botframework-webchat
-[25]:https://github.com/Microsoft/BotFramework-WebChat/tree/main/doc
+[25]:https://github.com/Microsoft/BotFramework-WebChat/tree/main/docs
 [26]:https://github.com/Microsoft/BotFramework-WebChat/tree/main/samples
 
 ### Bot Framework CLI
 The Bot Framework CLI Tools hosts the [open source](https://github.com/microsoft/botframework-cli) cross-platform Bot Framework CLI tool, designed to support building robust end-to-end development workflows. The Bot Framework CLI tool replaced the [legacy standalone tools](https://github.com/Microsoft/BotBuilder-Tools) used to manage bots and related services. BF CLI aggregates the collection of cross-platform tools into one cohesive and consistent interface.
+
+### Bot Framework Composer
+[Bot Framework Composer](https://github.com/microsoft/BotFramework-Composer/blob/main/README.md) is an integrated development tool for developers and multi-disciplinary teams to build bots and conversational experiences with the Microsoft Bot Framework. Within this tool, you'll find everything you need to build a sophisticated conversational experience.
+
+### Botkit
+[Botkit][100] is a developer tool and SDK for building chat bots, apps and custom integrations for major messaging platforms. Botkit bots `hear()` triggers, `ask()` questions and `say()` replies. Developers can use this syntax to build dialogs - now cross compatible with the latest version of Bot Framework SDK.
+
+In addition, Botkit brings with it 6 platform adapters allowing Javascript bot applications to communicate directly with messaging platforms: [Slack][102], [Webex Teams][103], [Google Hangouts][104], [Facebook Messenger][105], [Twilio][106], and [Web chat][107].
+
+Botkit is part of Microsoft Bot Framework and is released under the [MIT Open Source license][101]
+
+[100]:https://github.com/howdyai/botkit#readme
+[101]:https://github.com/howdyai/botkit/blob/main/LICENSE.md
+[102]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-slack#readme
+[103]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-webex#readme
+[104]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-hangouts#readme
+[105]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-facebook#readme
+[106]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-twilio-sms#readme
+[107]:https://github.com/howdyai/botkit/tree/main/packages/botbuilder-adapter-web#readme
 
 ## Related Services
 
